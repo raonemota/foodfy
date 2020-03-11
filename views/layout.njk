@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Foodify - Página Inicial</title>
+        <meta name="description" content="Site onde você encontra as melhores receitas" >
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <section class="general-contents">
+            <header>
+                <div class="nav">
+                    <div class="logo"><a href="/"><img src="/imgs/logo.png" alt="Logo Foodify"></a></div>
+                    <div class="links">
+                        <a href="/about">Sobre</a>
+                        <a class="active" href="/revenue">Receitas</a>
+                    </div>
+                </div>
+            </header>
+
+    {% block content %}{% endblock %}
+
+    </body>
+    <script src="scripts.js"></script>    
+</html>
