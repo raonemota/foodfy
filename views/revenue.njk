@@ -1,0 +1,35 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div class="cards">
+
+                {% for item in food %}
+                    <div class="card" id="{{ item.name }}">
+                    <img src="{{ item.img_url }}">
+                    <h2>{{ item.title }}</h1>
+                    <h3>{{ item.author }}</h3>
+                    </div> 
+                {% endfor %}
+                
+            </div>
+
+        </section> 
+            
+        <div class="footer">
+            <div class="footer__txt">Todos os direitos reservados pelo Foodfy</div>
+        </div>
+
+        <div class="modal-overlay">
+            <div class="modal">
+                <img src="imgs/asinhas.png" alt="">
+                <h2 class="modal__title">Assinhas de frango ao barbecue</h2>
+                <h3 class="modal__subtitle">Por vania</h3>
+                <div class="modal__close"><a class="close-modal">Fechar modal</a></div>
+            </div>
+        </div>
+    
+{% endblock %}
+               
+            
+        
