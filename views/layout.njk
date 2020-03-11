@@ -1,6 +1,10 @@
 <html>
     <head>
-        <title>Foodify - Página Inicial</title>
+
+        {% block head %}
+            <title>Foodify - Página Inicial</title>
+        {% endblock %}
+        
         <meta name="description" content="Site onde você encontra as melhores receitas" >
         <link href="style.css" rel="stylesheet">
     </head>
@@ -16,7 +20,11 @@
                 </div>
             </header>
 
-    {% block content %}{% endblock %}
+        {% block content %}{% endblock %}
+
+        <div class="footer">
+            <div class="footer__txt">Todos os direitos reservados pelo Foodfy</div>
+        </div>
 
     </body>
     <script src="scripts.js"></script>    
