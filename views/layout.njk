@@ -11,13 +11,9 @@
     <body>
         <section class="general-contents">
             <header>
-                <div class="nav">
-                    <div class="logo"><a href="/"><img src="/imgs/logo.png" alt="Logo Foodify"></a></div>
-                    <div class="links">
-                        <a href="/about">Sobre</a>
-                        <a class="active" href="/revenue">Receitas</a>
-                    </div>
-                </div>
+
+            {% block nav %}{% endblock %}
+                
             </header>
 
         {% block content %}{% endblock %}
