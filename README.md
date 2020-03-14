@@ -6,10 +6,10 @@ Foi utilizado no back-end o frameworks **Nujuncks** e **Express** com Node.js
 
 ## Vamos começar
 
-As dependencias do **Express** não foram inseridas no Github e serão necessárias as instalações do mesmo.
+Para começar, precisamos instalar as dependências do servidor (Express / Nodemon / nunjucks). As dependências já se encontram no package.json
 
 ```
-npm instal -d express
+npm install
 ```
 
 # Instalando
