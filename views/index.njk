@@ -1,5 +1,15 @@
 {% extends "layout.njk" %}
 
+{% block nav %}
+    <div class="nav">
+        <div class="logo"><a href="/"><img src="/imgs/logo.png" alt="Logo Foodify"></a></div>
+        <div class="links">
+            <a href="/about">Sobre</a>
+            <a href="/revenue">Receitas</a>
+        </div>
+    </div>
+ {% endblock %}
+
 {% block content %}
     <div class="banner">
                 <div class="banner__txts">

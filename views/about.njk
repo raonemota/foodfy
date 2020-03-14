@@ -1,20 +1,16 @@
-<html>
-    <head>
-        <title>Foodify - Página Inicial</title>
-        <meta name="description" content="Site onde você encontra as melhores receitas" >
-        <link href="style.css" rel="stylesheet">
-    </head>
-    <body>
-        <section class="general-contents">
-            <header>
-                <div class="nav">
-                    <div class="logo"><a href="/"><img src="imgs/logo.png" alt="Logo Foodify"></a></div>
-                    <div class="links">
-                        <a class="active" href="/about">Sobre</a>
-                        <a href="/revenue">Receitas</a>
-                    </div>
-                </div>
-            </header>
+{% extends "layout.njk" %}
+
+{% block nav %}
+    <div class="nav">
+        <div class="logo"><a href="/"><img src="/imgs/logo.png" alt="Logo Foodify"></a></div>
+        <div class="links">
+            <a class="active"  href="/about">Sobre</a>
+            <a href="/revenue">Receitas</a>
+        </div>
+    </div>
+ {% endblock %}
+
+ {% block content %}
 
             <div class="contents">
                 <h1>Sobre o Foodfy</h1>
@@ -53,9 +49,4 @@
 
         </section>  
         
-        <div class="footer">
-            <div class="footer__txt">Todos os direitos reservados pelo Foodfy</div>
-        </div>
-
-    </body>
-</html>
+{% endblock %}
