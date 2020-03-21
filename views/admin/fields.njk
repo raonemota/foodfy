@@ -1,0 +1,56 @@
+<div class="item">
+    <div>Imagem da receita</div>
+    <div>
+        <input type="text" name="img_recipe" value="{{ recipe.img_recipe }}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Título da receita</div>
+    <div>
+        <input type="text" name="title" value="{{ recipe.title }}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Ingredientes</div>
+    <div id="ingredients">
+        {% if recipe.ingredients == null %}
+            <div class="ingredient">
+                <input type="text" name="ingredients[]" value="" />
+            </div>   
+        {% else %}
+            {% for itemIngredient in recipe.ingredients %}
+            <div class="ingredient">
+                <input type="text" name="ingredients[]" value="{{itemIngredient}}" />
+            </div>
+            {% endfor %}
+        {% endif %}    
+    </div>
+    <button type="button" class="add-ingredient addItem">Adicionar ingrediente</button>            
+</div>
+
+<div class="item">
+    <div>Modo de preparo</div>
+    <div id="steps">
+        {% if recipe.method_of_preparation == null %}
+            <div class="step">
+                <input type="text" name="method_of_preparation[]" value="" />
+            </div>   
+        {% else %}
+            {% for itemStep in recipe.method_of_preparation %}
+            <div class="step">
+                <input type="text" name="method_of_preparation[]" value="{{itemStep}}" />
+            </div>
+            {% endfor %}
+        {% endif %}    
+    </div>
+    <button type="button" class="add-step addItem">Adicionar passos</button>
+</div>
+
+<div class="item">
+    <div>Informações adicionais</div>
+    <div>
+        <textarea name="aditional_info" rows="5">{{ recipe.aditional_info }} </textarea>
+    </div>
+</div>
